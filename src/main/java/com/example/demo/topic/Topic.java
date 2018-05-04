@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
 
 import com.example.demo.course.Course;
 
@@ -14,6 +15,7 @@ public class Topic {
 
 	@Id
 	private String id;
+	@Size(min=2)
 	private String name;
 	private String description;
 	
